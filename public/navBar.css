@@ -1,0 +1,185 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    /* Prevent horizontal scrollbars */
+}
+
+
+.navDesign {
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    /* background-color: blueviolet; */
+    background-color: rgba(173, 216, 230, 0.4);
+   
+    height: 65px;
+    /* border-radius: 10px;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    padding-left: 2%;
+    cursor: pointer;
+    margin: auto;
+    margin-left: 0px;
+
+}
+
+.logo:hover {
+    color: black;
+    transition: all 1s;
+}
+
+
+.navDesign ul {
+
+    display: flex;
+    list-style: none;
+}
+
+ul li {
+    /* font-family: 'Open Sans', sans-serif;
+    display:block;
+  position: relative;
+    /* margin: 0.3rem; */
+    /* margin: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    text-align: center; */
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 19px;
+    color: blue;
+    padding: 20px;
+    /* margin:10px 25px; */
+}
+
+ul li a:hover {
+    color: black;
+    transition: all 1s;
+    border-bottom: .1rem solid black;
+    padding-bottom: .2rem;
+
+}
+
+ul li a.special:hover {
+    border-bottom: none;
+
+}
+
+ul li ul.dropDown li {
+    display: block;
+    margin-left: 19px;
+    margin-bottom: 4%;
+}
+
+ul li ul.dropDown {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li:hover ul.dropDown {
+    display: block;
+}
+
+.burger {
+    display: none;
+}
+
+.line {
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+    border: 0px solid;
+    border-radius: 3px;
+}
+
+.ulDesign {
+    cursor: pointer;
+    padding-right: 2%;
+    /* display: flex; */
+
+
+}
+
+.ulDesign li:hover {
+    color: black;
+    transition: all 1s;
+}
+
+
+@media (min-width:200px) and (max-width:750px) {
+    .burger {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 20px;
+    }
+
+    .h-nav-resp {
+        opacity: 0;
+
+    }
+
+    .ulDesign {
+        padding-top: 20px;
+
+    }
+
+    ul li a {
+        padding: 5px;
+
+    }
+
+    ul li ul.dropDown li {
+        margin-left: 120px;
+    }
+
+    .logo {
+        padding-top: 3%;
+        text-align: center;
+    }
+
+    .navDesign {
+        flex-direction: column;
+        height: 65px;
+
+    }
+
+    .navDesign ul {
+        flex-direction: column;
+
+    }
+
+    .navDesign ul li {
+        padding-top: 10px;
+
+        margin: 0.3rem;
+    }
+}
