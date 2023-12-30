@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="nav">
+        <nav class="bg-blue-200 p-4 sticky top-0 w-full z-50">
+            <div class="container mx-auto flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#" class="text-blue-700 font-bold text-lg ">Elite Drains</a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="#" class="text-blue-700 hover:border-b-2 border-blue-700">Home</a>
+                    <a href="#" class="text-blue-700">About</a>
+                    <a href="#" class="text-blue-700">Services</a>
+                    <a class="text-blue-700" href="tel:+923217934949">Call <span class=" fa-solid fa-phone"></span>
+                        +923217934949</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-white" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Side Menu (Hidden by default) -->
+        <div class="md:hidden fixed top-0 left-0 h-full bg-blue-500 text-white p-4 w-64 transform -translate-x-full transition-transform z-50"
+            id="mobileMenu">
+            <a href="#" class="block py-2" onclick="closeMobileMenu()">Home</a>
+            <a href="#" class="block py-2" onclick="closeMobileMenu()">About</a>
+            <a href="#" class="block py-2" onclick="closeMobileMenu()">Services</a>
+
+            <!-- Mobile Dropdown Menu -->
+            <div class="relative group">
+                <a href="#" class="block py-2" onclick="toggleMobileDropdown()">Dropdown</a>
+                <div class="absolute hidden bg-blue-500 text-white" id="mobileDropdown">
+                    <a href="#" class="block py-2 px-4">Item 1</a>
+                    <a href="#" class="block py-2 px-4">Item 2</a>
+                    <a href="#" class="block py-2 px-4">Item 3</a>
+                </div>
+            </div>
+
+            <a href="#" class="block py-2" onclick="closeMobileMenu()">Contact</a>
+        </div>
+    </section>
+
+
+    <section class=" sm:px-6 lg:px-8">
+        <div class="mt-6 ">
+            <p class="w-ful text-xl md:text-3xl text-center">
+                <!-- Welcome, skilled plumbers! We're excited to have you on board. Complete the form below to become
+                a part of our trusted network of plumbing professionals. -->
+                At Elite Drains, we are genuinely thrilled to extend a warm welcome to talented plumbers like yourself!
+                Your expertise is highly valued, and we invite you to take a moment to immerse yourself in the
+                opportunity that awaits. By completing the form below, you'll not only become a member but an integral
+                force within our esteemed network of distinguished plumbing professionals.
+
+
+            </p>
+        </div>
+        <div class="mx-auto max-w-screen-xl px-4 py-16 mt-20 mb-20">
+            <div class="flex flex-col md:flex-row justify-between ">
+                <div class="w-full md:w-1/2 ">
+                    <img src="/plumber.png">
+
+
+                    <!-- <div class="mt-8">
+                        <a href="" class="text-2xl font-bold text-pink-600"> 0151 475 4450 </a>
+
+                        <address class="mt-2 not-italic">282 Kevin Brook, Imogeneborough, CA 58517</address>
+                    </div> -->
+                </div>
+
+                <div class="rounded-lg bg-white p-8 shadow-lg w-full md:w-1/2lg:p-12">
+                    <form action="" class="space-y-4">
+                        <div>
+                            <label for="name">Name</label>
+                            <div class="mt-2 border">
+
+                                <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Name"
+                                    type="text" id="name" required />
+                            </div>
+                        </div>
+
+                        <div class=" flex flex-col md:flex-row ">
+                            <div class="flex-grow mr-2">
+                                <label class="" for="email">Email</label>
+                                <div class="mt-2 border">
+
+                                    <input class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                                        placeholder="Email address" type="email" id="email" required />
+                                </div>
+                            </div>
+                            <div class="flex-grow">
+                                <label class=" " for="phone">Phone</label>
+                                <div class="mt-2 border">
+
+                                    <input class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                                        placeholder="Phone Number" type="tel" id="phone" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" flex flex-col md:flex-row">
+                            <div class="flex-grow mr-2">
+                                <label class="" for="email">Experience</label>
+                                <div class="mt-2 border">
+
+                                    <input class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                                        placeholder="Experience in Years" type="number" id="email" required />
+                                </div>
+                            </div>
+                            <div class="flex-grow">
+                                <label class=" " for="phone"> Rate/Hourly</label>
+                                <div class="mt-2 border">
+
+                                    <input class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                                        placeholder="R.S Rate/Hourly" type="number" id="phone" min="5" step="any"
+                                        required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" mt-10">
+                            <button class="border border-black py-2 px-4 text-white" style="background-color: red;">Submit</button>
+                        </div>
+
+
+             
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-gray-600 body-font ">
+        <hr class="bg-black ">
+        <div
+            class="container px-5 py-20 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+            <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+
+                    <span class="ml-3 text-xl">Elite Drains</span>
+                </a>
+                <p class="mt-2 text-sm text-gray-700">Solving plumbing challenges with expertise and care.</p>
+            </div>
+            <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">About Us</h2>
+                    <nav class="list-none mb-10">
+                        <li class="mb-2">
+                            <a href="../index.html#offers" class="text-gray-600 hover:text-gray-800">Offers</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../index.html#plumbingOfferings"
+                                class="text-gray-600 hover:text-gray-800">Plumbing</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../index.html#teamMeet" class="text-gray-600 hover:text-gray-800">Meet the Team</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-gray-600 hover:text-gray-800">Careers</a>
+                        </li>
+
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Our Services</h2>
+                    <nsav class="list-none mb-10">
+                        <li class="mb-2">
+                            <a class="text-gray-600 hover:text-gray-800">Residential Plumbing</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-gray-600 hover:text-gray-800">Commercial Plumbing</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-gray-600 hover:text-gray-800">Emergency Repairs</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-gray-600 hover:text-gray-800">Drian Cleaning</a>
+                        </li>
+                        </nav>
+                </div>
+
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Contact Us</h2>
+                    <nav class="list-none mb-10 	">
+                        <li class="mb-2">
+                            <a class="text-gray-600 hover:text-gray-800 ml-2" href="mailto:omeryahya1213@gmail.com">
+                                elitedrains6969"gmail.com</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-gray-600 hover:text-gray-800 ml-2" href="tel:+9232179696969">
+                                032179696969</a>
+                        </li>
+                        <li class="mb-2 ">
+                            <a class="text-gray-600 hover:text-gray-800 ml-2"> Elite Drains: Kohinoor City, Faisalabad
+                                37000, Pakistan</a>
+                        </li>
+
+                    </nav>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="bg-gray-100">
+            <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 EliteDrains —
+                    <a href="/" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@omery</a>
+                </p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                    <a class="text-gray-500">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="../main.js"></script>
+    <script src="../javaScript/register.js"></script>
+</body>
+
+</html>
