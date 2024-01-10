@@ -3,13 +3,14 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
 
   <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick.css">
   <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick-theme.css">
   <link rel="stylesheet" href="/styles/home.css">
+  <link rel="icon" href="/public/plumber.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <title>ELite Drains</title>
   <style>
     .pici {
       height: 100vh;
@@ -60,23 +61,30 @@
 
 
   <section class="nav">
-    <nav class="bg-blue-200 p-4 sticky top-0 w-full z-50">
+    <nav class="bg-gray-200 p-4 sticky top-0 w-full z-50">
       <div class="container mx-auto flex items-center justify-between">
         <!-- Logo -->
-        <a href="#" class="text-blue-700 font-bold text-lg ">Elite Drains</a>
+        <a href="#" class="text-black font-bold text-xl md:text-3xl ">Elite<span class="text-blue-500">Drains</span></a>
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-4">
-          <a href="#" class="text-blue-700 hover:border-b-2 border-blue-700">Home</a>
-          <a href="#" class="text-blue-700">About</a>
-          <a href="#" class="text-blue-700">Services</a>
-          <a class="text-blue-700" href="tel:+923217934949">Call <span class=" fa-solid fa-phone"></span>
+          <a href="../frontEnd/index.html"
+            class="text-black hover:text-blue-600 transition-alls delay-300  hover:border-b-2 border-black text-lg">Home</a>
+          <a href="/pages/about.html"
+            class="text-black hover:text-blue-600 transition-alls delay-300  hover:border-b-2 border-black  text-lg">About</a>
+
+          <a href="/pages/register.html" target="_blank"
+            class="text-black hover:text-blue-600 transition-alls delay-300  hover:border-b-2 border-black  text-lg">Register</a>
+          <a href="/pages/logIn.html" target="_blank"
+            class="text-black hover:text-blue-600 transition-alls delay-300  hover:border-b-2 border-black  text-lg">LogIn</a>
+          <a class="text-black hover:text-blue-600 transition-alls delay-300  hover:border-b-2 border-black  text-lg"
+            href="tel:+923217934949">Call <span class=" fa-solid fa-phone"></span>
             +923217934949</a>
         </div>
 
         <!-- Mobile Menu Button -->
         <div class="md:hidden">
-          <button class="text-white" onclick="toggleMobileMenu()">
+          <button class="text-blue-500" onclick="toggleMobileMenu()">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -88,23 +96,25 @@
 
     <!-- Side Menu (Hidden by default) -->
     <div
-      class="md:hidden fixed top-0 left-0 h-full bg-blue-500 text-white p-4 w-64 transform -translate-x-full transition-transform z-50"
+      class="md:hidden fixed top-0 left-0 h-full bg-white text-black p-4 w-64 transform -translate-x-full transition-transform z-50"
       id="mobileMenu">
-      <a href="#" class="block py-2" onclick="closeMobileMenu()">Home</a>
-      <a href="#" class="block py-2" onclick="closeMobileMenu()">About</a>
-      <a href="#" class="block py-2" onclick="closeMobileMenu()">Services</a>
+      <a href="#" class="text-black font-bold text-3xl mb-32">Elite<span class="text-blue-500">Drains</span></a>
 
-      <!-- Mobile Dropdown Menu -->
-      <div class="relative group">
-        <a href="#" class="block py-2" onclick="toggleMobileDropdown()">Dropdown</a>
-        <div class="absolute hidden bg-blue-500 text-white" id="mobileDropdown">
-          <a href="#" class="block py-2 px-4">Item 1</a>
-          <a href="#" class="block py-2 px-4">Item 2</a>
-          <a href="#" class="block py-2 px-4">Item 3</a>
-        </div>
-      </div>
-
-      <a href="#" class="block py-2" onclick="closeMobileMenu()">Contact</a>
+      <a href="/frontEnd/index.html"
+        class="block text-black hover:text-blue-600 transition-all delay-300 hover:border-b-2 border-black text-lg"
+        onclick="closeMobileMenu()">Home</a>
+      <a href="/pages/about.html"
+        class="block text-black hover:text-blue-600 transition-all delay-300 hover:border-b-2 border-black text-lg"
+        onclick="closeMobileMenu()">About</a>
+      <a href="/pages/register.html" target="_blank"
+        class="block text-black hover:text-blue-600 transition-all delay-300 hover:border-b-2 border-black text-lg"
+        onclick="closeMobileMenu()">Register</a>
+      <a href="/pages/logIn.html" target="_blank"
+        class="block text-black hover:text-blue-600 transition-all delay-300 hover:border-b-2 border-black text-lg"
+        onclick="closeMobileMenu()">LogIn</a>
+      <a href="tel:+923217934949"
+        class="block text-black hover:text-blue-600 transition-all delay-300 hover:border-b-2 border-black text-lg"
+        onclick="closeMobileMenu()">Call <span class="fa-solid fa-phone"></span> +923217934949</a>
     </div>
   </section>
 
@@ -112,7 +122,7 @@
 
 
     <div class="flex md:flex-row  flex-col  md:justify-between px-5 items-center	">
-      <div  class=" fade-down-right  md:mb-0 md:w-1/2 w-full text-center md:text-left ">
+      <div class=" fade-down-right  md:mb-0 md:w-1/2 w-full text-center md:text-left ">
         <h1 class="text-4xl md:text-7xl font-bold text-white"> The <span class="text-blue-400">Plumber</span>
           <br />You Deserve
         </h1>
@@ -125,14 +135,13 @@
           </button>
         </a>
       </div>
-      <div 
-        class="fade-down-left md:mt-16  flex flex-row md:justify-end justify-center md:w-1/2 w-full h-full">
+      <div class="fade-down-left md:mt-16  flex flex-row md:justify-end justify-center md:w-1/2 w-full h-full">
         <img class="  pici " src="backgroundMen.png" alt="menImage">
       </div>
     </div>
   </section>
 
-
+  <!-- 
   <div class="contai alx overflow-hidden mt-32">
     <div class="cardcontainer flex-col md:flex-row ">
 
@@ -236,7 +245,113 @@
 
 
 
+  </div> -->
+
+  *<div class="contai alx overflow-hidden mt-32">
+    <div class="cardcontainer flex-col md:flex-row ">
+
+      <div class="mainimg fade-down-left">
+
+        <img class="img " src="services_01.png" alt="Slide 1">
+
+      </div>
+      <div class="aee fade-down-right">
+        <div class="text">
+          <span class="text-lg">WHAT WE OFFER </span><br>
+          <h1 class="text-4xl"><b>Explore Our <span class="text-blue-500">Services & Solutions</span></b></h1>
+          <br><br>
+          <div class="flex gap-4 mb-4">
+            <div>
+              <img class="img1 w-20 h-20" src="download (1).jpeg" alt="">
+            </div>
+            <div class="">
+              <b style="color: blue;">Pipe Leaking </b>
+              <h3>your sewer pump is essential for removing sewage from <br> Your sump pit ton your septic
+                tank or sewage system</h3>
+            </div>
+
+          </div>
+          <div class="flex gap-4">
+            <div><img class="img2 w-20 h-20" src="OIP.jpeg" alt=""></div>
+            <div> <b style="color: blue;">Drain Cleaning </b>
+              <h3>if your tub or sink is draining slower than usual, or won;t <br>drain al all, your drain
+                is either clogged or damaged </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cardcontainer md:flex-row flex-col">
+
+      <div class="mainimg">
+
+        <img class="img " src="services_02.png" alt="Slide 1">
+
+      </div>
+      <div class="aee">
+        <div class="text">
+          <span class="text-lg">WHAT WE OFFER </span><br>
+          <h1 class="text-4xl"><b>For Companies Only: Buy <span class="text-blue-500">Italian Flues</span></b></h1>
+          <br><br>
+          <div class="flex gap-4 mb-4">
+            <div>
+              <img class="img1 w-20 h-20" src="images.png" alt="">
+            </div>
+            <div class="">
+              <b style="color: blue;">Toilet Leaking</b>
+              <h3>if you live in an apartment building, you're sure to see a <br> sign put up by management to
+                keep your faucet dripping</h3>
+            </div>
+
+          </div>
+          <div class="flex gap-4">
+            <div><img class="img2 w-20 h-20" src="download.png" alt=""></div>
+            <div> <b style="color: blue;">Drain Cleaning </b>
+              <h3>if your tub or sink is draining slower than usual, or won;t <br>drain al all, your drain
+                is either clogged or damaged </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cardcontainer md:flex-row flex-col">
+
+      <div class="mainimg">
+
+        <img class="img " src="services_03.png" alt="Slide 1">
+
+      </div>
+      <div class="aee">
+        <div class="text">
+          <span class="text-lg">WHAT WE OFFER </span><br>
+          <h1 class="text-4xl"><b>Need Professional Help <span class="text-blue-500">Your Project?</span></b></h1>
+          <br><br>
+          <div class="flex gap-4 mb-4">
+            <div>
+              <img class="img1 w-20 h-20" src="images1.jpeg" alt="">
+            </div>
+            <div class="">
+              <b style="color: blue;">OverFlowing Toilet </b>
+              <h3>After you try to wipe away debris by hands, it's time <br> to run to a chemical drain
+                cleaner</h3>
+            </div>
+
+          </div>
+          <div class="flex gap-4">
+            <div><img class="img2 w-20 h-20" src="solder.jpeg" alt=""></div>
+            <div> <b style="color: blue;">Solder Copper </b>
+              <h3>You're ready to do some plumbing work in your house, <br>and have to learn how to solider
+                copper</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
   </div>
+
 
   <section class="cards bg-gray-100 p-8 mt-32 ">
     <h1 id="plumbingOfferings" class="zoom-in text-center font-semibold text-4xl mt-20	">Explore Our
@@ -289,10 +404,11 @@
         <div class="text-2xl md:text-4xl font-bold text-white">
           Are You Looking for a Plumber Near You?
         </div>
-        <button
-          class="cursor-pointer	 p-4 text-2xl bg-gradient-to-r from-blue-500 via-purple-400 to-red-500 rounded text-white font-bold mt-6 md:mt-0 transition duration-300 transform hover:-translate-y-1">
-          Search Plumber
-        </button>
+        <a href="./pages/search.html"> <button
+            class="cursor-pointer	 p-4 text-2xl bg-gradient-to-r from-blue-500 via-purple-400 to-red-500 rounded text-white font-bold mt-6 md:mt-0 transition duration-300 transform hover:-translate-y-1">
+            Search Plumber
+          </button>
+        </a>
       </div>
     </div>
 
@@ -1088,7 +1204,7 @@
     </div>
   </footer>
 
- 
+
 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/slick-carousel/slick/slick.min.js"></script>

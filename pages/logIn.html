@@ -3,19 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="icon" href="/public/plumber.png">
-    <title>Register</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <style>
-        /* Additional custom styles can be added here */
-        body {
-            font-family: 'Arial', sans-serif;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-100">
+
+<body class="bg-gray-100 h-screen ">
+
     <section class="nav">
         <nav class="bg-gray-200 p-4 sticky top-0 w-full z-50">
             <div class="container mx-auto flex items-center justify-between">
@@ -25,7 +21,7 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-4">
-                    <a href="../index.html"
+                    <a href="/index.html"
                         class="text-black hover:text-blue-600 transition-alls delay-300  hover:border-b-2 border-black text-lg">Home</a>
                     <a href="/pages/about.html"
                         class="text-black hover:text-blue-600 transition-alls delay-300  hover:border-b-2 border-black  text-lg">About</a>
@@ -57,7 +53,7 @@
             id="mobileMenu">
             <a href="#" class="text-black font-bold text-3xl mb-32">Elite<span class="text-blue-500">Drains</span></a>
 
-            <a href="/frontEnd/index.html"
+            <a href="/index.html"
                 class="block text-black hover:text-blue-600 transition-all delay-300 hover:border-b-2 border-black text-lg"
                 onclick="closeMobileMenu()">Home</a>
             <a href="/pages/about.html"
@@ -74,84 +70,41 @@
                 onclick="closeMobileMenu()">Call <span class="fa-solid fa-phone"></span> +923217934949</a>
         </div>
     </section>
+    <div class="flex items-center justify-center my-20">
+        <div class="bg-white p-8 rounded-lg shadow-md w-full md:w-96 ">
 
+            <h2 class="text-2xl font-semibold mb-4">Login</h2>
 
-    <!-- Registration Section -->
-    <section
-        class="container mx-auto px-4   mb-20 flex flex-col md:flex-row justify-between bg-white rounded-lg shadow-lg">
-        <div class="w-full md:w-1/2 mb-8 md:mb-0">
-            <img src="https://images.pexels.com/photos/7772528/pexels-photo-7772528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Plumber Image" class="w-full max-w-md mx-auto mb-4 rounded-lg">
-        </div>
+            <!-- Form -->
+            <form action="POST" onsubmit="event.preventDefault()">
+                <!-- Email Input -->
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
+                    <input type="email" id="email" name="email"
+                        class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500 transition duration-300">
+                </div>
 
-        <div
-            class="w-full md:w-1/2 lg:p-8 flex flex-col justify-center items-center  md:justify-start md:items-start text-center">
-            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-500">Register as a Plumber</h2>
-            <p class="text-sm text-start text-blue-300 mb-4">
-                Join Elite Drains and become a part of our network of skilled plumbers. Showcase your expertise and
-                connect with
-                users looking for your services. Fill out the registration form below to get started.
-            </p>
-            <div class="mb-4 flex flex-col md:flex-row items-center">
-                <label for="name" class="text-sm font-medium text-gray-600 md:w-24 mb-1 md:mb-0">Name</label>
-                <input type="text" id="name"
-                    class="form-input border-2 border-blue-500 rounded-md p-2 w-full focus:outline-none focus:border-blue-700">
-            </div>
+                <!-- Password Input -->
+                <div class="mb-6">
+                    <label for="password" class="block text-sm font-medium text-gray-600">Password</label>
+                    <input type="password" id="password" name="password"
+                        class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500 transition duration-300">
+                </div>
 
-            <div class="mb-4 flex flex-col md:flex-row items-center">
-                <label for="email" class="text-sm font-medium text-gray-600 md:w-24 mb-1 md:mb-0">Email</label>
-                <input type="email" id="email"
-                    class="form-input border-2 border-blue-500 rounded-md p-2 w-full focus:outline-none focus:border-blue-700">
-            </div>
-
-            <div class="mb-4 flex flex-col md:flex-row items-center">
-                <label for="phone" class="text-sm font-medium text-gray-600 md:w-24 mb-1 md:mb-0">Phone</label>
-                <input type="tel" id="phone"
-                    class="form-input border-2 border-blue-500 rounded-md p-2 w-full focus:outline-none focus:border-blue-700">
-            </div>
-
-            <div class="mb-4 flex flex-col md:flex-row items-center">
-                <label for="age" class="text-sm font-medium text-gray-600 md:w-24 mb-1 md:mb-0">Age</label>
-                <input type="number" id="age"
-                    class="form-input border-2 border-blue-500 rounded-md p-2 w-full focus:outline-none focus:border-blue-700">
-            </div>
-
-            <div class="mb-4 flex flex-col md:flex-row items-center">
-                <label for="rate" class="text-sm font-medium text-gray-600 md:w-24 mb-1 md:mb-0">Rate/Hourly</label>
-                <input type="number" id="rate"
-                    class="form-input border-2 border-blue-500 rounded-md p-2 w-full focus:outline-none focus:border-blue-700"
-                    min="5" step="any">
-            </div>
-
-            <div class="mb-4 flex flex-col md:flex-row items-center">
-                <label for="password" class="text-sm font-medium text-gray-600 md:w-24 mb-1 md:mb-0">Password</label>
-                <input type="password" id="password"
-                    class="form-input border-2 border-blue-500 rounded-md p-2 w-full focus:outline-none focus:border-blue-700">
-            </div>
-
-            <div class="mb-4 flex flex-col md:flex-row items-center">
-                <label for="city" class="text-sm font-medium text-gray-600 md:w-24 mb-1 md:mb-0">City</label>
-                <input type="text" id="city"
-                    class="form-input border-2 border-blue-500 rounded-md p-2 w-full focus:outline-none focus:border-blue-700">
-            </div>
-
-
-
-
-
-
-
-
-
-
-            <button type="button" onclick="validateForm()" class=" bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 focus:outline-none
-                focus:shadow-outline-blue active:bg-blue-800">
-                Submit
-            </button>
+                <!-- Login Button -->
+                <button type="submit" onclick="handleLogIn()"
+                    class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition duration-300">
+                    Login
+                </button>
             </form>
-        </div>
-    </section>
 
+            <!-- Already Registered Link -->
+            <p class="mt-4 text-sm text-gray-600">
+                Not Registered Yet? <a href="../pages/register.html" class="text-blue-500 hover:underline">SignUp</a>.
+            </p>
+
+        </div>
+    </div>
     <footer class="text-gray-600 body-font">
         <hr class="bg-black ">
         <div
@@ -264,10 +217,37 @@
             </div>
         </div>
     </footer>
-    <!-- Footer Section -->
 
-    <script type="module" src="../main.js"></script>
-    <script src="../javaScript/register.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.min.js"
+        integrity="sha512-TjBzDQIDnc6pWyeM1bhMnDxtWH0QpOXMcVooglXrali/Tj7W569/wd4E8EDjk1CwOAOPSJon1VfcEt1BI4xIrA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // Function to collect data and log it to the console
+        async function handleLogIn() {
+
+            // Get email and password input values
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            try {
+                // Log the data to the console
+                console.log("Email:", email);
+                localStorage.setItem("email",email);
+                console.log("Password:", password);
+                let response = await axios.post(("http://localhost:3000/api/signin"), { email, password });
+                // console.log(response.data.message);
+                // alert(response.data.message);
+                window.location.href = '../pages/postLogin.html';
+            }
+            catch (err) {
+                console.log(err.response.data.error);
+
+                alert(err.response.data.error);
+            }
+
+
+        }
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Include the CDN links for Splide.js -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/themes/splide-default.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
+</head>
+
+<body>
+    <section class="nav">
+        <nav class="bg-gray-200 p-4 sticky top-0 w-full z-50">
+            <div class="container mx-auto flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#" class="text-black font-bold text-xl md:text-3xl ">Elite<span
+                        class="text-blue-500">Drains</span></a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="../index.html"
+                        class="text-black hover:text-blue-600 transition-alls delay-300  hover:border-b-2 border-black text-lg">Home</a>
+                    <a href="/pages/about.html"
+                        class="text-black hover:text-blue-600 transition-alls delay-300  hover:border-b-2 border-black  text-lg">About</a>
+
+                    <a href="/pages/register.html" target="_blank"
+                        class="text-black hover:text-blue-600 transition-alls delay-300  hover:border-b-2 border-black  text-lg">Register</a>
+                    <a href="/pages/logIn.html" target="_blank"
+                        class="text-black hover:text-blue-600 transition-alls delay-300  hover:border-b-2 border-black  text-lg">LogIn</a>
+                    <a class="text-black hover:text-blue-600 transition-alls delay-300  hover:border-b-2 border-black  text-lg"
+                        href="tel:+923217934949">Call <span class=" fa-solid fa-phone"></span>
+                        +923217934949</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-blue-500" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Side Menu (Hidden by default) -->
+        <div class="md:hidden fixed top-0 left-0 h-full bg-white text-black p-4 w-64 transform -translate-x-full transition-transform z-50"
+            id="mobileMenu">
+            <a href="#" class="text-black font-bold text-3xl mb-32">Elite<span class="text-blue-500">Drains</span></a>
+
+            <a href="/frontEnd/index.html"
+                class="block text-black hover:text-blue-600 transition-all delay-300 hover:border-b-2 border-black text-lg"
+                onclick="closeMobileMenu()">Home</a>
+            <a href="/pages/about.html"
+                class="block text-black hover:text-blue-600 transition-all delay-300 hover:border-b-2 border-black text-lg"
+                onclick="closeMobileMenu()">About</a>
+            <a href="/pages/register.html" target="_blank"
+                class="block text-black hover:text-blue-600 transition-all delay-300 hover:border-b-2 border-black text-lg"
+                onclick="closeMobileMenu()">Register</a>
+            <a href="/pages/logIn.html" target="_blank"
+                class="block text-black hover:text-blue-600 transition-all delay-300 hover:border-b-2 border-black text-lg"
+                onclick="closeMobileMenu()">LogIn</a>
+            <a href="tel:+923217934949"
+                class="block text-black hover:text-blue-600 transition-all delay-300 hover:border-b-2 border-black text-lg"
+                onclick="closeMobileMenu()">Call <span class="fa-solid fa-phone"></span> +923217934949</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="container mx-auto mt-8 p-8 bg-white rounded-lg shadow-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- Left Column (Image Slider) -->
+            <div>
+                <div id="image-slider" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <img src="../public/featured_image.jpg" alt="About Us Image 1"
+                                    class="w-full h-screen rounded-lg">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="../public/abouttt.jpg" alt="About Us Image 2"
+                                    class="w-full h-screen rounded-lg">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="../public/abouttt_1.jpg" alt="About Us Image 2"
+                                    class="w-full h-screen rounded-lg">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="../public/abouttt_2.jpg" alt="About Us Image 2"
+                                    class="w-full h-screen rounded-lg">
+                            </li>
+
+
+                            <!-- Add more slider items as needed -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column (Text) -->
+            <div>
+                <h2 class="text-3xl font-bold mb-4"><span class="text-blue-500">About</span> Us</h2>
+                <p class="mb-4">Welcome to Plumber Website, your trusted plumbing services provider. We have been
+                    serving the community for over a decade, offering high-quality plumbing solutions for residential
+                    and commercial clients.</p>
+                <p class="mb-4">Our team of experienced plumbers is dedicated to delivering exceptional service,
+                    ensuring your satisfaction with every project. Whether it's a simple repair or a complex
+                    installation, we've got you covered.</p>
+                <p class="mb-4">At Plumber Website, we prioritize reliability, professionalism, and customer
+                    satisfaction. Contact us for all your plumbing needs!</p>
+
+                <!-- Additional Content -->
+                <h3 class="text-2xl font-bold my-4">Our <span class="text-blue-500"> Services</span></h3>
+                <p class="mb-4">We offer a wide range of plumbing services, including:</p>
+                <ul class="list-disc pl-4">
+                    <li>Leak detection and repair</li>
+                    <li>Drain cleaning</li>
+                    <li>Water heater installation and repair</li>
+                    <li>Pipe replacement</li>
+                    <!-- Add more services as needed -->
+                </ul>
+
+                <h3 class="text-2xl text-blue-500 font-bold my-4">Why <span class="text-gray-900">Choose</span> Us?</h3>
+                <p class="mb-4">Choosing Plumber Website comes with several advantages:</p>
+                <ul class="list-disc pl-4">
+                    <li>Experienced and certified plumbers</li>
+                    <li>Quick and reliable service</li>
+                    <li>Competitive pricing</li>
+                    <li>Customer satisfaction guaranteed</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="text-blue-500">
+        <h2 class="text-4xl font-bold text-center mb-4">Welcome to Plumber Website</h2>
+        <!-- ... (Previous content) ... -->
+
+        <!-- Cards Section -->
+        <h3 class="text-2xl font-bold text-center mb-4">Our Team</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div
+                class="group relative bg-white p-6 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                <img src="../public/our_team_03.jpg" alt="Team Member 1"
+                    class="w-full h-auto rounded-full mb-4 grayscale group-hover:grayscale-0 transition duration-300">
+                <div
+                    class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                    <h4 class="text-xl font-bold mb-2">John Doe</h4>
+                    <p class="text-gray-800">Lead Plumber</p>
+                    <p class="text-blue-500">
+                        John Doe is a dedicated and experienced plumber <br> with a passion for delivering high-quality
+                        plumbing <br> services. With over 10 years of experience in the <br>industry, John has built a
+                        reputation for his reliability <br>and commitment to customer satisfaction.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="group relative bg-white p-6 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                <img src="../public/our_team_04.jpg" alt="Team Member 2"
+                    class="w-full h-auto rounded-full mb-4 grayscale group-hover:grayscale-0 transition duration-300">
+                <div
+                    class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                    <h4 class="text-xl font-bold mb-2">Jane Smith</h4>
+                    <p class="text-gray-800">Plumbing Specialist</p>
+                    <p class="text-blue-500">
+                        Jane Smith is a skilled plumbing specialist known <br> for her expertise in tackling complex
+                        plumbing
+                        challenges. <br> With a background in both residential and commercial <br> plumbing, Jane brings
+                        versatility
+                        and a meticulous <br> approach to every project she undertakes.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="group relative bg-white p-6 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                <img src="../public/our_team_05.jpg" alt="Team Member 3"
+                    class="w-full h-auto rounded-full mb-4 grayscale-75 group-hover:grayscale-0 transition duration-300">
+                <div
+                    class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                    <h4 class="text-xl font-bold mb-2">Mike Johnson</h4>
+                    <p class="text-gray-800">Senior Technician</p>
+                    <p class="text-blue-500">
+                        Mike Johnson is our seasoned senior technician, bringing <br> a wealth of experience to our
+                        plumbing team.
+                        Known for <br> his problem-solving skills and attention to detail, <br> Mike ensures that every
+                        plumbing task is
+                        <br>handled with precision and expertise.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="bg-cover bg-center h-screen relative overflow-hidden"
+        style="background-image: url('background_heating_02.jpg');">
+        <div class="text-white text-center mt-2">
+            <h2 class="text-3xl font-bold mb-1 text-blue-500">Our <span class="text-gray-900"> Heating</span> Projects
+            </h2>
+            <p class="text-lg mb-8">Explore some of our projects showcasing our expertise and quality work.</p>
+        </div>
+        <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 h-full justify-center mx-6 sm:mx-8 md:mx-12 lg:mx-16 xl:mx-20">
+            <div>
+                <img src="../public/gallery_projects_19-1280x1280 (1).jpg" alt="Project 1"
+                    class="ml-8 w-64 h-24 sm:w-full sm:h-48 object-cover rounded-lg border-4 border-white transform transition-transform hover:scale-110">
+            </div>
+            <div>
+                <img src="../public/gallery_projects_20-1280x1280.jpg" alt="Project 2"
+                    class="ml-8 w-64 h-24 sm:w-full sm:h-48 object-cover rounded-lg border-4 border-white transform transition-transform hover:scale-110">
+            </div>
+            <div>
+                <img src="../public/gallery_projects_21-1280x1280.jpg" alt="Project 3"
+                    class="ml-8 w-64 h-24 sm:w-full sm:h-48 object-cover rounded-lg border-4 border-white transform transition-transform hover:scale-110">
+            </div>
+            <div>
+                <img src="../public/gallery_projects_22-1280x1280.jpg" alt="Project 4"
+                    class="ml-8 w-64 h-24 sm:w-full sm:h-48 object-cover rounded-lg border-4 border-white transform transition-transform hover:scale-110">
+            </div>
+            <div>
+                <img src="../public/gallery_projects_23-1280x1280.jpg" alt="Project 5"
+                    class="ml-8 w-64 h-24 sm:w-full sm:h-48 object-cover rounded-lg border-4 border-white transform transition-transform hover:scale-110">
+            </div>
+            <div>
+                <img src="../public/gallery_projects_24-1280x1280.jpg" alt="Project 6"
+                    class="ml-8 w-64 h-24 sm:w-full sm:h-48 object-cover rounded-lg border-4 border-white transform transition-transform hover:scale-110">
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="bg-gray-100 py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Latest News and Offers</h2>
+
+            <div class="flex flex-wrap justify-center items-center -mx-4">
+                <!-- Card 1 -->
+                <div class="flex-shrink-0 mb-16 mx-8 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4">
+                    <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                        <img src="../public/gallery_projects_22-1280x1280.jpg" alt="Special Offer Image"
+                            class="w-full h-auto mb-4 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2">Special Offer</h3>
+                        <p class="text-gray-600">Get 20% off on your first plumbing service. Limited time offer!</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="flex-shrink-0 mb-16 mx-12 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4">
+                    <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                        <img src="../public/news.jpg" alt="New Services Image" class="w-full h-auto mb-4 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2">New Services</h3>
+                        <p class="text-gray-600">Introducing eco-friendly plumbing solutions for a sustainable future.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="flex-shrink-0 mb-16 mx-12 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4">
+                    <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                        <img src="../public/news1.jpg" alt="Emergency Service Image"
+                            class="w-full h-auto mb-4 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2">Emergency Service</h3>
+                        <p class="text-gray-600">24/7 emergency plumbing services. We're here when you need us the most.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-gray-600 body-font">
+        <hr class="bg-black ">
+        <div
+            class="container px-5 py-20 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+            <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+
+                    <span class="ml-3 text-xl">Elite Drains</span>
+                </a>
+                <p class="mt-2 text-sm text-gray-700">Solving plumbing challenges with expertise and care.</p>
+            </div>
+            <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">About Us</h2>
+                    <nav class="list-none mb-10">
+                        <li class="mb-2">
+                            <a href="#offers" class="text-gray-600 hover:text-gray-800">Offers</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#plumbingOfferings" class="text-gray-600 hover:text-gray-800">Plumbing</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#teamMeet" class="text-gray-600 hover:text-gray-800">Meet the Team</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-gray-600 hover:text-gray-800">Careers</a>
+                        </li>
+
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Our Services</h2>
+                    <nsav class="list-none mb-10">
+                        <li class="mb-2">
+                            <a class="text-gray-600 hover:text-gray-800">Residential Plumbing</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-gray-600 hover:text-gray-800">Commercial Plumbing</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-gray-600 hover:text-gray-800">Emergency Repairs</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-gray-600 hover:text-gray-800">Drian Cleaning</a>
+                        </li>
+                        </nav>
+                </div>
+
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Contact Us</h2>
+                    <nav class="list-none mb-10 	">
+                        <li class="mb-2">
+                            <a class="text-gray-600 hover:text-gray-800 ml-2" href="mailto:omeryahya1213@gmail.com">
+                                elitedrains6969"gmail.com</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-gray-600 hover:text-gray-800 ml-2" href="tel:+9232179696969">
+                                032179696969</a>
+                        </li>
+                        <li class="mb-2 ">
+                            <a class="text-gray-600 hover:text-gray-800 ml-2"> Elite Drains: Kohinoor City, Faisalabad
+                                37000, Pakistan</a>
+                        </li>
+
+                    </nav>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="bg-gray-100">
+            <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 EliteDrains —
+                    <a href="/" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@omery</a>
+                </p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                    <a class="text-gray-500">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script type="module" src="/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#image-slider', {
+                type: 'fade',
+                heightRatio: 1,
+                pagination: false,
+            }).mount();
+        });
+    </script>
+
+    <!-- jQuery for Card Animation (optional) -->
+    <script>
+        $(document).ready(function () {
+            $('.rounded-lg').hover(
+                function () {
+                    $(this).addClass('shadow-xl');
+                },
+                function () {
+                    $(this).removeClass('shadow-xl');
+                }
+            );
+        });
+
+
+        function toggleMobileMenu() {
+            var mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenu.style.transform === 'translateX(0%)') {
+                mobileMenu.style.transform = 'translateX(-100%)';
+            } else {
+                mobileMenu.style.transform = 'translateX(0%)';
+            }
+        }
+
+        // Toggle mobile dropdown menu visibility
+        function toggleMobileDropdown() {
+            var mobileDropdown = document.getElementById('mobileDropdown');
+            mobileDropdown.style.display = (mobileDropdown.style.display === 'none' || mobileDropdown.style.display === '') ? 'block' : 'none';
+        }
+
+        // Close mobile menu when a link is clicked
+        function closeMobileMenu() {
+            var mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.style.transform = 'translateX(-100%)';
+        }
+
+
+    </script>
+</body>
+
+</html>

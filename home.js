@@ -22,6 +22,7 @@ function closeMobileMenu() {
 }
 
 
+
 //findPlumbers Section
 const projectsCounter = document.getElementById('projectsCounter');
 const clientsCounter = document.getElementById('clientsCounter');

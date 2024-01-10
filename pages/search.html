@@ -3,16 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="icon" href="/public/plumber.png">
-    <title>Register</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <style>
-        /* Additional custom styles can be added here */
-        body {
-            font-family: 'Arial', sans-serif;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumber Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // JavaScript code will go here
+    </script>
 </head>
 
 <body class="bg-gray-100">
@@ -25,7 +21,7 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-4">
-                    <a href="../index.html"
+                    <a href="../frontEnd/index.html"
                         class="text-black hover:text-blue-600 transition-alls delay-300  hover:border-b-2 border-black text-lg">Home</a>
                     <a href="/pages/about.html"
                         class="text-black hover:text-blue-600 transition-alls delay-300  hover:border-b-2 border-black  text-lg">About</a>
@@ -74,83 +70,21 @@
                 onclick="closeMobileMenu()">Call <span class="fa-solid fa-phone"></span> +923217934949</a>
         </div>
     </section>
-
-
-    <!-- Registration Section -->
-    <section
-        class="container mx-auto px-4   mb-20 flex flex-col md:flex-row justify-between bg-white rounded-lg shadow-lg">
-        <div class="w-full md:w-1/2 mb-8 md:mb-0">
-            <img src="https://images.pexels.com/photos/7772528/pexels-photo-7772528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Plumber Image" class="w-full max-w-md mx-auto mb-4 rounded-lg">
-        </div>
-
-        <div
-            class="w-full md:w-1/2 lg:p-8 flex flex-col justify-center items-center  md:justify-start md:items-start text-center">
-            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-blue-500">Register as a Plumber</h2>
-            <p class="text-sm text-start text-blue-300 mb-4">
-                Join Elite Drains and become a part of our network of skilled plumbers. Showcase your expertise and
-                connect with
-                users looking for your services. Fill out the registration form below to get started.
-            </p>
-            <div class="mb-4 flex flex-col md:flex-row items-center">
-                <label for="name" class="text-sm font-medium text-gray-600 md:w-24 mb-1 md:mb-0">Name</label>
-                <input type="text" id="name"
-                    class="form-input border-2 border-blue-500 rounded-md p-2 w-full focus:outline-none focus:border-blue-700">
-            </div>
-
-            <div class="mb-4 flex flex-col md:flex-row items-center">
-                <label for="email" class="text-sm font-medium text-gray-600 md:w-24 mb-1 md:mb-0">Email</label>
-                <input type="email" id="email"
-                    class="form-input border-2 border-blue-500 rounded-md p-2 w-full focus:outline-none focus:border-blue-700">
-            </div>
-
-            <div class="mb-4 flex flex-col md:flex-row items-center">
-                <label for="phone" class="text-sm font-medium text-gray-600 md:w-24 mb-1 md:mb-0">Phone</label>
-                <input type="tel" id="phone"
-                    class="form-input border-2 border-blue-500 rounded-md p-2 w-full focus:outline-none focus:border-blue-700">
-            </div>
-
-            <div class="mb-4 flex flex-col md:flex-row items-center">
-                <label for="age" class="text-sm font-medium text-gray-600 md:w-24 mb-1 md:mb-0">Age</label>
-                <input type="number" id="age"
-                    class="form-input border-2 border-blue-500 rounded-md p-2 w-full focus:outline-none focus:border-blue-700">
-            </div>
-
-            <div class="mb-4 flex flex-col md:flex-row items-center">
-                <label for="rate" class="text-sm font-medium text-gray-600 md:w-24 mb-1 md:mb-0">Rate/Hourly</label>
-                <input type="number" id="rate"
-                    class="form-input border-2 border-blue-500 rounded-md p-2 w-full focus:outline-none focus:border-blue-700"
-                    min="5" step="any">
-            </div>
-
-            <div class="mb-4 flex flex-col md:flex-row items-center">
-                <label for="password" class="text-sm font-medium text-gray-600 md:w-24 mb-1 md:mb-0">Password</label>
-                <input type="password" id="password"
-                    class="form-input border-2 border-blue-500 rounded-md p-2 w-full focus:outline-none focus:border-blue-700">
-            </div>
-
-            <div class="mb-4 flex flex-col md:flex-row items-center">
-                <label for="city" class="text-sm font-medium text-gray-600 md:w-24 mb-1 md:mb-0">City</label>
-                <input type="text" id="city"
-                    class="form-input border-2 border-blue-500 rounded-md p-2 w-full focus:outline-none focus:border-blue-700">
-            </div>
-
-
-
-
-
-
-
-
-
-
-            <button type="button" onclick="validateForm()" class=" bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 focus:outline-none
-                focus:shadow-outline-blue active:bg-blue-800">
-                Submit
+    <div class="container mx-auto p-5 my-8">
+        <div class="max-w-md mx-auto">
+            <input type="text" id="cityInput" placeholder="Enter City"
+                class="w-full p-2 border border-gray-300 rounded mt-1">
+            <button onclick="searchPlumbers()" class="w-full bg-blue-500 text-white p-2 rounded mt-2">
+                Search
             </button>
-            </form>
         </div>
-    </section>
+
+        <div id="results" class="mt-5">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+
+
 
     <footer class="text-gray-600 body-font">
         <hr class="bg-black ">
@@ -264,10 +198,11 @@
             </div>
         </div>
     </footer>
-    <!-- Footer Section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.min.js"
+        integrity="sha512-TjBzDQIDnc6pWyeM1bhMnDxtWH0QpOXMcVooglXrali/Tj7W569/wd4E8EDjk1CwOAOPSJon1VfcEt1BI4xIrA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../javaScript/search.js"></script>
 
-    <script type="module" src="../main.js"></script>
-    <script src="../javaScript/register.js"></script>
 </body>
 
 </html>
